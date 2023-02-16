@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300&family=Itim&family=Roboto:wght@400;500&display=swap');
+.loginPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15rem;
+    
+}
+.heading{
+font-size: 2rem;
+margin-bottom: 2.7rem;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+line-height: 2.5px;
+text-align: center;
+color: #101828;
+}
+ 
+.userLogin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.userLogin .username{
+    display: flex;
+    flex-direction: column;
+}
+.userLogin .username label{
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    margin-left: 8px;
+    font-family: 'Inter';
+}
+.userLogin .pwd{
+    display: flex;
+    flex-direction: column;
+}
+.userLogin .pwd label{
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    margin-left: 8px;
+    font-family: 'Inter';
+}
+.userLogin input{
+    width: 25.71rem;
+    height: 3rem;
+    margin-bottom: 2rem;
+    border-radius:0.8rem;
+    background-color: #F2F2F2;
+    border: #D0D5DD 1px solid;
+    /* padding: 10px, 14px, 10px, 14px; */
+    font-size: 1.4rem;
+    margin-left: 0.5rem;
+    padding: 0 12px;
+    color: rgba(102, 112, 133, 1);
+}
+
+.username input::placeholder{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #667085;
+    padding: 5px;
+}
+
+.username input[type="text"]:focus{
+    padding: 0 0.8rem;
+}
+.pwd input::placeholder{
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding:0 5px;
+    line-height: 24px;
+    color: #667085;
+    
+}
+.pwd input[type="password"]:focus{
+    padding: 0 0.8rem;
+}
+.btn{
+    height: 3rem;
+    width:25.71rem ;
+    background-color: #34CB65;
+    /* background-color: red; */
+    padding: 10px 18px;
+    border: 1px solid #34CB65;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+    color: #F2F2F2;
+}
+.btn:hover{
+    border: rgb(51, 51, 244) 1px solid ;
+    cursor: pointer;
+}
+.checkValidity h4{
+color: red;
+}

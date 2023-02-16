@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300&family=Itim&family=Roboto:wght@400;500&display=swap');
+/* .stick{
+    position: sticky;
+    top:0;
+} */
+.upperSec{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10rem;
+}
+.upperSec .taskHead{
+    width: 12rem;
+height: 1.4rem;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 28px;
+line-height: 1rem;
+color: #4A4A4A;
+margin-left: 1rem;
+}
+.upperSec .btn{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px 16px;
+gap: 8px;
+width: 6rem;
+height: 3rem;
+text-decoration: none;
+background-color: #FFFFFF;
+border: 1px solid #D0D5DD;
+box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+border-radius: 8px;
+}
+.upperSec .btn:hover{
+    cursor: pointer;
+    border: #4A4A4A 1px solid;
+}
+.searchArea input{
+    box-sizing: border-box;
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 10px 14px;
+gap: 8px;
+position: absolute;
+width: 22.85rem;
+height: 3rem;
+left: 45rem;
+top: 10rem;
+background: #FFFFFF;
+border: 1px solid #D0D5DD;
+box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+border-radius: 8px;
+font-size: 1.2rem;
+}
+.tableContainer{
+    border: #4A4A4A 1px solid;
+    margin-left: 22rem;
+    max-width: 65rem;
+    max-height: 35rem;
+    overflow-y: scroll;
+    height: 70vh;
+}
+.tableRowHeading{
+    box-sizing: border-box;
+padding: 12px 24px;
+gap: 12px;
+
+width: 15rem;
+height: 2.8px;
+
+background-color: rgb(251, 253, 255);
+border-bottom: 1px solid #EAECF0;
+position: sticky;
+top: 0;
+
+}
+.tableCellHeading{
+    width: 8rem;
+height: 1rem;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 1rem;
+line-height: 18px;
+/* color: #475467; */
+
+}
+
+
+.tableCellwithImg{
+    display:flex ; 
+  align-items: center;
+}
+.tableCellwithImg span{
+    font-weight: 700;
+margin-left: 1rem;
+margin-top: 2px;
+}
+.tableCellwithImg img{
+    background-color: rgb(224, 223, 223);
+/* display: flex; */
+/* flex-direction: column; */
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+width: 40px;
+height: 40px;
+border-radius: 200px;
+}
+/* .tableCell{
+    display: flex;
+    align-items: center;
+} */
+
+.tableBody .noResults {
+    color: rgb(75, 75, 75);
+    width: 12rem;
+    margin-top: 11rem;
+    margin-left: 25rem;
+}
