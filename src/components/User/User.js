@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -16,12 +16,22 @@ export default function User({datas}) {
 
  const navigate=useNavigate();
 
+ useEffect(()=>{
+  if(!(localStorage.getItem("userData")&&(localStorage.getItem("passwordData")))){
+    navigate('/login');
+  }
+  else{
+    navigate('/users')
+  }
+ },[])
+
   const [query,setQuery]=useState("");
   const keys=["firstName","lastName","email"];
 
   const changes=()=>{
-    localStorage.clear();
-    navigate('/');
+    localStorage.removeItem("userData");
+    localStorage.removeItem("passwordData");
+    navigate('/login');
   }
 
   const list=datas.users;
@@ -30,7 +40,6 @@ const filteredData=list?.filter((item)=>keys?.some((key)=>item[key].toLowerCase(
 
 return (
   <>
-  <div className={styles.stick}>
     <div className={styles.upperSec}>
       <h2 className={styles.taskHead}>
         FreJunTask
@@ -39,7 +48,6 @@ return (
     </div>
   <div className={styles.searchArea}>
     <input type="text" placeholder='Search..' onChange={(e)=>setQuery(e.target.value)}/>
-  </div>
   </div>
     <TableContainer className={styles.tableContainer} component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">

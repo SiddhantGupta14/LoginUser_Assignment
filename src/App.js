@@ -3,7 +3,7 @@ import './App.css';
 import Login from './components/Login/Login';
 import User from './components/User/User';
 import axios from 'axios';
-import {BrowserRouter as Router,Route,Link, Routes} from "react-router-dom";
+import {BrowserRouter as Router,Route,Link, Routes, Navigate} from "react-router-dom";
 function App() {
   
   const[loading,setLoading]=useState(false);
@@ -11,6 +11,8 @@ function App() {
 
   const getUsername=window.localStorage.getItem("userData");
   const getPassword=window.localStorage.getItem("passwordData");
+
+  
 
 useEffect(() => {
   const fetchData=async()=>{
@@ -26,7 +28,8 @@ useEffect(() => {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" element={!(getUsername&&getPassword)?<Login />:<User datas={datas} />} />
+          <Route exact path="/" element={(getUsername&&getPassword)? <User  datas={datas} /> :  <Navigate replace to =  "/login" />  } />
+          <Route path="/login" element={<Login />} />
           <Route path="/users" element={(loading)?<h1 className='load' >Loading...</h1>:<User datas={datas} />} />
         </Routes>
       </Router>

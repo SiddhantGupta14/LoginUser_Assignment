@@ -13,10 +13,10 @@ const Login = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [invalid,setInvalid]=useState(false);
 
-   console.log ("d")
+  //  console.log ("d")
   const handleChange = (e) => {
     const { name, value } = e.target;
-    console.log(user);
+    // console.log(user);
     setUser({
       ...user,
       [name]: value,
@@ -30,8 +30,8 @@ const Login = () => {
 
   // const getUsername=localStorage.getItem("userData");
   //   const getPassword=localStorage.getItem("passwordData");
-  //   console.log(getUsername);
-  //   console.log(getPassword);
+  //   console.log(getUsername.data);
+  //   console.log(getPassword.data);
 
   const handleClick=(event)=>{
     event.preventDefault();
