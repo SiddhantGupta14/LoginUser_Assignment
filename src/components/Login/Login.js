@@ -13,10 +13,10 @@ const Login = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [invalid,setInvalid]=useState(false);
 
-  //  console.log ("d")
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
-    // console.log(user);
+    
     setUser({
       ...user,
       [name]: value,
@@ -28,18 +28,13 @@ const Login = () => {
     localStorage.setItem("passwordData","");
   },[])
 
-  // const getUsername=localStorage.getItem("userData");
-  //   const getPassword=localStorage.getItem("passwordData");
-  //   console.log(getUsername.data);
-  //   console.log(getPassword.data);
+  
 
   const handleClick=(event)=>{
     event.preventDefault();
     if (user.username === "admin@frejun" && user.password === "12345678") {
       localStorage.setItem("userData","admin@frejun");
-      // console.log(getUsername);
       localStorage.setItem("passwordData","12345678");
-      // console.log(getPassword);
       setIsLoggedIn(true);
       navigate('/users');
     } else {
